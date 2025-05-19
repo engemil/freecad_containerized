@@ -5,9 +5,10 @@ services:
       dockerfile: Dockerfile # The path to our Dockerfile
     container_name: freecad
     network_mode: host
-    #environment:
-    #  - DISPLAY=${DISPLAY} # Connecting host and container GUI
-    #command: freecad
+    environment:
+      - DISPLAY=${DISPLAY} # Connecting host and container GUI
+      - XDG_RUNTIME_DIR=/tmp/runtime-freecad
+    command: freecad # Create directory and set permissions
     tty: true
     privileged: true
     volumes:

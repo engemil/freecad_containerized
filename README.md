@@ -40,12 +40,10 @@ Setup
     - Alterantively: `sudo chmod +x ./stop.sh` and `./stop.sh`
 
 
+## Good to Know
+- Problems running the `start.sh` or `stop.sh` scripts? Try to fix it with `dos2unix`
+    - Install: `sudo apt install dos2unix`
+    - Run: `dos2unix ./start.sh`
+    - Now the `./start.sh` script will be able to run
 
-## To-Dos
-
-- Test with Ubuntu as host computer
-- Figure out if I can integrate into VS code with the tasks in `tasks.json` (requires to be "run as adminsitrator" in Windows?)
-- Make an easy way to pull projects?
-- Figure out how to integrate good solutions for getting EDA/CAD models from webpage such as digikey, mouser, etc..
-- Figure out how to store EDA/CAD models libraries separately and easy to add
 
