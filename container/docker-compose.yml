@@ -1,0 +1,15 @@
+services:
+  freecad:
+    build:
+      context: .
+      dockerfile: Dockerfile # The path to our Dockerfile
+    container_name: freecad
+    network_mode: host
+    #environment:
+    #  - DISPLAY=${DISPLAY} # Connecting host and container GUI
+    #command: freecad
+    tty: true
+    privileged: true
+    volumes:
+      - ../:/workspace:cached # Workspace folder
+      - /tmp/.X11-unix:/tmp/.X11-unix # Connecting host and container GUI
