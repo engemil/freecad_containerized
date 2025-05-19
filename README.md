@@ -47,3 +47,14 @@ Setup
     - Now the `./start.sh` script will be able to run
 
 
+## TODO
+
+- FIX bugs:
+    - Alternative to `freecad --pass --no-sanbox` ???
+        - `[26:26:0519/173559.999199:ERROR:zygote_host_impl_linux.cc(90)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.`
+        - `Unrecognised argument '--no-sandbox'`
+    - `[199:205:0519/174145.091597:ERROR:command_buffer_proxy_impl.cc(141)] ContextResult::kTransientFailure: Failed to send GpuChannelMsg_CreateCommandBuffer.`
+    - Figure out how to set it up with the newest freecad version
+        - Inspiration? https://github.com/bombillazo/FreeCAD-Docker-Image
+        
+

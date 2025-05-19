@@ -4,13 +4,13 @@ services:
       context: .
       dockerfile: Dockerfile # The path to our Dockerfile
     container_name: freecad
-    network_mode: host
     environment:
       - DISPLAY=${DISPLAY} # Connecting host and container GUI
+      - QT_X11_NO_MITSHM=1
       - XDG_RUNTIME_DIR=/tmp/runtime-freecad
-    command: freecad # Create directory and set permissions
+    #command: freecad --single-instance --pass --no-sandbox
     tty: true
-    privileged: true
+    #privileged: true
     volumes:
       - ../:/workspace:cached # Workspace folder
       - /tmp/.X11-unix:/tmp/.X11-unix # Connecting host and container GUI
