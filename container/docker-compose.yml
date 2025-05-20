@@ -6,8 +6,8 @@ services:
     container_name: freecad
     environment:
       - DISPLAY=${DISPLAY} # Connecting host and container GUI
-      - QT_X11_NO_MITSHM=1
-      - XDG_RUNTIME_DIR=/tmp/runtime-freecad
+      #- QT_X11_NO_MITSHM=1
+      #- XDG_RUNTIME_DIR=/tmp/runtime-freecad
     #command: freecad --single-instance --pass --no-sandbox
     tty: true
     #privileged: true
